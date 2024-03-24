@@ -1,21 +1,20 @@
-let speed;
-let distance = 5;
-let dermit;
-
-function speedOfCar(){
-    if (speed <= 70){
-        console.log("OK");
+const speedDriver = (speed) =>{
+    if (speed <=80){
+      console.log("OK");
     }
-}
-
-function dermitCount(){
-    if (speed >=80 && distance === 5){
-        for (points =0; i<12; i++){
-            return points = 1;
-        }
-        console.log(`You have a total of over ${dermitCount()} `);
+    let demeritPoint = 0;
+    let count = 0;
+    for (let i=80; i < speed; i++){
+      if (count ===3){
+        demeritPoint = demeritPoint + 1;
+      }
+      else if (count === 4){
+        count = 0;
+      }
+      count = count +1;
     }
-    if (dermitCount === 12){
-        console.log("License Supended.");
+    if (demeritPoint >=12){
+      console.log("License Suspende");
     }
-}
+    console.log(`Points: ${demeritPoint}`);
+  };
